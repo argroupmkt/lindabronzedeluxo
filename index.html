@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Linda Bronze de Luxo - O melhor bronzeamento de Campo Grande. Desenvolvido por AR GROUP MKT.">
+    <meta name="description" content="Linda Bronze de Luxo - Tabela de Preços: Bronze, Cílios e Sobrancelhas.">
     <title>Linda Bronze de Luxo | Campo Grande - MS</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- DESIGN SYSTEM (MESMO DO ANTERIOR) --- */
+        /* --- DESIGN SYSTEM (MANTIDO) --- */
         :root {
             --gold: #D4AF37;
             --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
@@ -42,7 +42,7 @@
             color: var(--dark-bg);
         }
 
-        /* --- HEADER (Nome Corrigido) --- */
+        /* --- HEADER --- */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -70,7 +70,6 @@
             color: var(--dark-bg);
             letter-spacing: -0.5px;
         }
-        /* Ajuste para o nome completo ficar harmônico */
         .logo span { color: var(--gold); font-weight: 400; font-style: italic; margin-left: 5px; }
 
         .btn {
@@ -102,7 +101,6 @@
         /* --- HERO --- */
         .hero {
             height: 95vh;
-            /* Mantive apenas a imagem de fundo do Hero para ambiente, pois landing page sem hero image fica muito "crua" */
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
@@ -152,14 +150,14 @@
         }
         .title-group h2 { font-size: 2.5rem; line-height: 1.2; }
 
-        /* --- ÍCONES NO LUGAR DE FOTOS (GRID GENÉRICO) --- */
+        /* --- GRID DE SERVIÇOS --- */
         .features-grid, .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        /* Card Unificado (Serve para Serviços e Diferenciais) */
+        /* Card Unificado */
         .info-card {
             background: var(--white);
             border-radius: 20px;
@@ -177,7 +175,6 @@
             border-color: rgba(212, 175, 55, 0.3);
         }
 
-        /* Círculo do Ícone */
         .icon-circle {
             width: 80px;
             height: 80px;
@@ -195,30 +192,34 @@
 
         .info-card h3 {
             font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .info-card p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            line-height: 1.6;
             margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
         }
 
-        .info-card ul {
+        /* ESTILO DA LISTA DE PREÇOS (ADAPTADO) */
+        .price-list {
             text-align: left;
-            margin-top: 15px;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
+            margin-top: 10px;
+            padding: 0;
         }
-        .info-card li {
+        
+        .price-list li {
             list-style: none;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-size: 0.9rem;
             color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 8px;
         }
-        .info-card li i { color: var(--gold); margin-right: 8px; }
+
+        .price-list li strong {
+            color: var(--dark-bg);
+            margin-left: 10px;
+        }
 
         /* --- MAPA --- */
         .map-section {
@@ -292,6 +293,7 @@
             .hero h1 { font-size: 2.5rem; }
             .title-group h2 { font-size: 2rem; }
             .map-overlay { width: 90%; padding: 20px; }
+            .price-list li { font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -327,25 +329,19 @@
                 <div class="info-card">
                     <div class="icon-circle"><i class="fa-solid fa-gem"></i></div>
                     <h3>Atendimento de Luxo</h3>
-                    <p>Do agendamento ao pós-bronze, você é tratada como rainha.</p>
+                    <p style="color: #777; font-size: 0.9rem;">Do agendamento ao pós-bronze, você é tratada como rainha.</p>
                 </div>
 
                 <div class="info-card">
                     <div class="icon-circle"><i class="fa-solid fa-pump-medical"></i></div>
                     <h3>Biossegurança Total</h3>
-                    <p>Materiais descartáveis e esterilizados. Higiene rigorosa.</p>
+                    <p style="color: #777; font-size: 0.9rem;">Materiais descartáveis e esterilizados. Higiene rigorosa.</p>
                 </div>
 
                 <div class="info-card">
                     <div class="icon-circle"><i class="fa-solid fa-user-shield"></i></div>
                     <h3>Privacidade</h3>
-                    <p>Ambiente discreto e confortável para você se sentir à vontade.</p>
-                </div>
-
-                <div class="info-card">
-                    <div class="icon-circle"><i class="fa-solid fa-clock"></i></div>
-                    <h3>Pontualidade</h3>
-                    <p>Respeitamos seu tempo. Atendimento com hora marcada.</p>
+                    <p style="color: #777; font-size: 0.9rem;">Ambiente discreto e confortável para você se sentir à vontade.</p>
                 </div>
             </div>
         </div>
@@ -354,44 +350,64 @@
     <section class="section-padding" style="background-color: #f8f8f8;">
         <div class="container">
             <div class="title-group">
-                <span>Menu de Serviços</span>
-                <h2>Técnicas Exclusivas</h2>
+                <span>Tabela de Valores</span>
+                <h2>Nossos Serviços</h2>
             </div>
 
             <div class="services-grid">
+                
                 <div class="info-card">
                     <div class="icon-circle"><i class="fa-regular fa-sun"></i></div>
-                    <h3>Bronze Solar</h3>
-                    <p>A marquinha definida com exposição controlada e produtos premium.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Vitamina D</li>
-                        <li><i class="fa-solid fa-check"></i> Cor intensa na 1ª sessão</li>
+                    <h3>Bronze no Sol</h3>
+                    <ul class="price-list">
+                        <li>Bronze de Sol (a partir) <strong>R$ 100</strong></li>
+                        <li>Bronze + Banho Chantilly <strong>R$ 140</strong></li>
+                        <li>Dama da Noite <strong>R$ 150</strong></li>
+                        <li>Banho de Chantilly Kakau <strong>R$ 120</strong></li>
+                        <li>Banho Karla Click10 <strong>R$ 150</strong></li>
+                        <li>Bronze Click10 <strong>R$ 150</strong></li>
                     </ul>
                 </div>
 
                 <div class="info-card">
                     <div class="icon-circle"><i class="fa-solid fa-wind"></i></div>
-                    <h3>Bronze na Cabine</h3>
-                    <p>Tecnologia avançada para um bronzeamento uniforme e rápido.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Sem depender do sol</li>
-                        <li><i class="fa-solid fa-check"></i> Total privacidade</li>
+                    <h3>Bronze Máquina</h3>
+                    <ul class="price-list">
+                        <li>Deitada + Massagem <strong>R$ 150</strong></li>
+                        <li style="font-size: 0.8rem; color: #999; border:none; margin-top:-10px;">(+ Banho de Chantilly)</li>
+                        <li>Em Pé + Banho <strong>R$ 130</strong></li>
+                    </ul>
+                    <p style="font-size: 0.8rem; margin-top: 15px; color: #888;">*Não depende do clima</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon-circle"><i class="fa-regular fa-eye"></i></div>
+                    <h3>Extensão de Cílios</h3>
+                    <ul class="price-list">
+                        <li>Volume Híbrido <strong>R$ 150</strong></li>
+                        <li>Volume Russo <strong>R$ 180</strong></li>
+                        <li>Volume Egípcio <strong>R$ 120</strong></li>
+                        <li>Volume Brasileiro <strong>R$ 120</strong></li>
+                        <li>Manutenção <strong>R$ 90</strong></li>
                     </ul>
                 </div>
 
                 <div class="info-card">
                     <div class="icon-circle"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Banho de Lua</h3>
-                    <p>Pelos dourados, esfoliação e hidratação profunda.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Pele macia e renovada</li>
-                        <li><i class="fa-solid fa-check"></i> Massagem relaxante inclusa</li>
+                    <h3>Sobrancelhas</h3>
+                    <ul class="price-list">
+                        <li>Design Simples <strong>R$ 35</strong></li>
+                        <li>Design + Henna <strong>R$ 50</strong></li>
                     </ul>
+                    <div style="margin-top: 20px;">
+                        <a href="https://wa.me/5567996530904" style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">Agendar Design →</a>
+                    </div>
                 </div>
+
             </div>
             
             <div style="text-align: center; margin-top: 50px;">
-                 <a href="https://wa.me/5567996530904" class="btn btn-gold" style="background: #333; box-shadow: none;">Ver Tabela de Preços</a>
+                 <a href="https://wa.me/5567996530904" class="btn btn-gold" style="background: #333; box-shadow: none;">Agendar Horário</a>
             </div>
         </div>
     </section>
